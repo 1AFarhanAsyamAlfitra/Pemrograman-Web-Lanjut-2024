@@ -5,7 +5,7 @@ namespace app\Models;
 use illuminate\Database\Eloquent\Model;
 use illuminate\Database\Eloquent\Relations\HasMany;
 
-class KategoriModel extends Model
+class BarangModel extends Model
 {
     protected $table = 'm_kategori';
     protected $primaryKey = 'kategori_id';
@@ -14,6 +14,6 @@ class KategoriModel extends Model
 
     public function barang(): HasMany
     {
-        return $this->hasMany(KategoriModel::class, 'kategori_id', 'kategori_id') ;
+        return $this->hasMany(KategoriModel::class, 'barang_id', 'barang_id') ;
     }
 }
