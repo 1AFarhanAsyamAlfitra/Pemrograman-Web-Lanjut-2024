@@ -26,7 +26,7 @@ class KategoriController extends Controller
 
         // $data = DB::table('m_kategori')->get();
         // return view('kategori', ['data' => $data]);
-            return $DataTable->render('kategori.index');
+        return $DataTable->render('kategori.index');
 
     }
 }
