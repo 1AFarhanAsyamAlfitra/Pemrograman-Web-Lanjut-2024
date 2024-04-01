@@ -13,10 +13,7 @@
     <form>
       <div class="form-group">
         <label for="user_id">User ID</label>
-        <select class="form-control" id="user_id">
-          <option value="1">User 1</option>
-          <option value="2">User 2</option>
-          <option value="3">User 3</option>
+        <input type="text" class="form-control" id="userid" placeholder="Enter user ID">
         </select>
       </div>
       <div class="form-group">
