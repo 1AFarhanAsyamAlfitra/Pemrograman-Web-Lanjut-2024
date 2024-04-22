@@ -7,7 +7,11 @@
             <div class="card-tools"></div>
         </div>
         <div class="card-body">
-            Selamat datang semua, ini adalah halaman utama dari aplikasi ini.
+            {!! $chart->container() !!}
         </div>
     </div>
 @endsection
+@push('js')
+<script src="{{ $chart->cdn() }}"></script>
+{{ $chart->script() }}
+@endpush

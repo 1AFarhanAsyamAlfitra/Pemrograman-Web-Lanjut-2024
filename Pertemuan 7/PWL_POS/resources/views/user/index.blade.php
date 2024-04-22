@@ -1,3 +1,23 @@
+<style>
+    .dt-buttons {
+        display: flex;
+        gap: .5rem !important;
+    }
+
+    .dt-buttons .btn {
+        border-radius: 5px !important;
+        border: none;
+    }
+
+    .dt-buttons .btn.buttons-excel {
+        background-color: #33c481;
+    }
+
+    .dt-buttons .btn.buttons-pdf {
+        background-color: #f00;
+    }
+</style>
+
 @extends('layouts.template')
 @section('content')
     <div class="card card-outline card-primary">
@@ -50,6 +70,8 @@
     <script>
         $(document).ready(function() {
             var dataUser = $('#table_user').DataTable({
+                dom: 'Bfrtip',
+                buttons: ['excel', 'pdf'],
                 serverSide: true, // serverSide: true, jika ingin menggunakan server side processing
                 ajax: {
                     "url": "{{ url('user/list') }}",

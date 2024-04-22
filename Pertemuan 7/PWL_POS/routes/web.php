@@ -13,6 +13,7 @@ use App\Http\Controllers\PenjualanController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\GambarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -116,6 +117,31 @@ Route::group(['prefix' => 'auth'], function () {
     // Rute logout
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });
+
+Route::group(['prefix' => 'gambar'], function () {
+    Route::get('/', [GambarController::class, 'index'])->name('gambar.index');
+    Route::post('/list', [GambarController::class, 'list'])->name('gambar.list');
+    Route::get('/create', [GambarController::class, 'create'])->name('gambar.create');
+    Route::post('/', [GambarController::class, 'store'])->name('gambar.store');
+    Route::get('/{id}', [GambarController::class, 'show'])->name('gambar.show');
+    Route::get('/{id}/edit', [GambarController::class, 'edit'])->name('gambar.edit');
+    Route::put('/{id}', [GambarController::class, 'update'])->name('gambar.update');
+    Route::delete('/{id}', [GambarController::class, 'destroy'])->name('gambar.destroy');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Route::get('login', [AuthController::class, 'showLoginForm'])->name('login');
 // Route::post('login', [AuthController::class, 'login']);
 // Route::get('register', [AuthController::class, 'showRegistrationForm'])->name('register');

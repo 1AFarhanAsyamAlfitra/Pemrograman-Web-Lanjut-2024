@@ -58,6 +58,12 @@
                   </a>
               </li>
               <li class="nav-item">
+                <a href="{{ url('/gambar') }}" class="nav-link {{ ($activeMenu == 'gambar')? 'active' : '' }}">
+                    <i class="nav-icon fas fa-solid fa-image"></i>
+                    <p>Gambar</p>
+                </a>
+            </li>
+              <li class="nav-item">
                 <a href="{{ url('/logout') }}" class="nav-link">
                     <i class="nav-icon fas fa-sign-out-alt"></i>
                     <p>Log out</p>
