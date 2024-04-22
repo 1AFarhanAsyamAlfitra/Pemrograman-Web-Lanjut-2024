@@ -26,7 +26,8 @@ use App\Http\Controllers\Auth\RegisterController;
 */
 
 Route::get('/', [WelcomeController::class, 'index']);
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/logout', [AuthController::class, 'logout']);
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 use App\Http\Controllers\VisualizationController;
 
@@ -77,8 +78,8 @@ Route::group(['prefix' => 'product'], function () {
 });
 
 Route::group(['prefix' => 'stok'], function () {
-    Route::get('/', [StokController::class, 'index']);
-    Route::post('/list', [StokController::class, 'list']);
+    Route::get('/', [StokController::class, 'index'])->name('stok');
+    Route::get('/list', [StokController::class, 'list']);
     Route::get('/create', [StokController::class, 'create']);
     Route::post('/', [StokController::class, 'store']);
     Route::get('/{id}', [StokController::class, 'show']);
@@ -105,7 +106,7 @@ Route::group(['prefix' => 'auth'], function () {
     // Menampilkan form login
     Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
     // Melakukan proses login
-    Route::post('login', [LoginController::class, 'login']);
+    Route::post('login', [AuthController::class, 'login']);
 
     // Menampilkan form pendaftaran
     Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');

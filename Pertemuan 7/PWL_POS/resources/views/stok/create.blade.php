@@ -10,7 +10,15 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('stok') }}">
                             @csrf
-
+                            @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                             <div class="form-group row">
                                 <label for="barang_id" class="col-md-4 col-form-label text-md-right">Barang</label>
 
@@ -30,8 +38,8 @@
                                 <div class="col-md-6">
                                     <select id="user_id" class="form-control" name="user_id" required>
                                         <option value="">Pilih User</option>
-                                        @foreach ($user as $u)
-                                            <option value="{{ $u->user_id }}">{{ $u->user_nama }}</option>
+                                        @foreach ($users as $u)
+                                            <option value="{{ $u->user_id }}">{{ $u->nama }}</option>
                                         @endforeach
                                     </select>
                                 </div>

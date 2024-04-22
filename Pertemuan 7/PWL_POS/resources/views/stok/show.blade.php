@@ -14,7 +14,7 @@
                             </tr>
                             <tr>
                                 <th>User</th>
-                                <td>{{ $stok->user->user_nama }}</td>
+                                <td>{{ $stok->user->username }}</td>
                             </tr>
                             <tr>
                                 <th>Tanggal</th>
@@ -23,10 +23,6 @@
                             <tr>
                                 <th>Jumlah</th>
                                 <td>{{ $stok->stok_jumlah }}</td>
-                            </tr>
-                            <tr>
-                                <th>Keterangan</th>
-                                <td>{{ $stok->stok_keterangan }}</td>
                             </tr>
                         </tbody>
                     </table>

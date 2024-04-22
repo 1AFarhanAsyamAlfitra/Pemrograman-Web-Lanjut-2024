@@ -72,9 +72,10 @@ class ProductController extends Controller
             'harga_beli' => 'required|numeric',
             'harga_jual' => 'required|numeric',
         ]);
-
+        
         ProductModel::create($request->all());
-
+        $product = ProductModel::all();
+        $categories = CategoryModel::all();
         return redirect('/product')->with('success', 'Data Produk berhasil disimpan');
     }
 
@@ -95,8 +96,8 @@ class ProductController extends Controller
             'title' => 'Detail Produk'
         ];
 
-        $activeMenu = 'products';
-
+        $activeMenu = 'product';
+        
         
         return view('product.show', compact('breadcrumb', 'page', 'product', 'activeMenu'));
     }
@@ -115,16 +116,15 @@ class ProductController extends Controller
             'title' => 'Edit Produk',
         ];
 
-        $activeMenu = 'products';
+        $activeMenu = 'product';
 
-        // $categories = CategoryModel::all();
         return view('product.edit', compact('breadcrumb', 'page', 'product', 'categories', 'activeMenu'));
     }
 
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'kategori_id' => 'required|integer',
+            'kategori_id' => 'required|integer|unique:m_kategori,kategori_id',
             'barang_kode' => 'required|string|min:3|unique:m_barang,barang_kode,'.$id.',barang_id',
             'barang_nama' => 'required|string|max:100',
             'harga_beli' => 'required|numeric',

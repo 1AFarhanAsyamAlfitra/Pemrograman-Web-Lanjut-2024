@@ -8,6 +8,7 @@ use App\Models\ProductModel;
 use App\Models\UserModel;
 use Yajra\DataTables\Facades\DataTables;
 use App\Models\CategoryModel;
+use App\Models\LevelModel;
 use Illuminate\Support\Facades\DB;
 
 class StokController extends Controller
@@ -96,7 +97,7 @@ class StokController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'product_id' => 'required|integer',
+            // 'product_id' => 'required|integer',
             'user_id' => 'required|integer',
             'stok_tanggal' => 'required|date',
             'stok_jumlah' => 'required|integer',
@@ -112,7 +113,8 @@ class StokController extends Controller
         $stok = StokModel::with('product')->with('user')->find($id);
         $products = ProductModel::all();
         $users = UserModel::all();
-
+        $level = LevelModel::all();
+        
         $breadcrumb = (object) [
             'title' => 'Edit stok',
             'list' => ['Home', 'stok', 'Edit']
@@ -124,17 +126,19 @@ class StokController extends Controller
 
         $activeMenu = 'stok';
 
-        return view('stok.edit', compact('breadcrumb', 'page', 'stok', 'products', 'users', 'activeMenu'));
+        return view('stok.edit', compact('breadcrumb', 'page', 'stok', 'products', 'users', 'activeMenu','level'));
     }
 
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'product_id' => 'nullable|integer',
+            'barang_id' => 'nullable|integer',
             'user_id' => 'nullable|integer',
             'stok_tanggal' => 'nullable|date',
             'stok_jumlah' => 'nullable|numeric',
         ]);
+
+        // dd($request->all());
 
         StokModel::find($id)->update($request->all());
 
