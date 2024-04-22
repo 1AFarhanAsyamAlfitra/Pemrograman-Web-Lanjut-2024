@@ -90,22 +90,31 @@ class UserController extends Controller
             return redirect('/user')->with('success', 'Data user berhasil disimpan');
         }
 
-        public function show($id) {
-            $user = UserModel::with('level')->find($id);
-    
-            $breadcrumb = (object) [
-                'title' => 'Detail User',
-                'list'  => ['Home', 'User', 'Detail']
-            ];
-    
-            $page = (object) [
-                'title' => 'Detail user'
-            ];
-    
-            $activeMenu = 'user';
-    
-            return view('user.show', ['breadcrumb' => $breadcrumb, 'page' => $page, 'user' => $user, 'activeMenu' => $activeMenu]);
-        }
+        public function show($id)
+{
+    $user = UserModel::findOrFail($id);
+    $level = LevelModel::all(); // Ambil semua data level
+
+    $breadcrumb = (object) [
+        'title' => 'Detail User',
+        'list' => ['Home', 'User', 'Detail']
+    ];
+
+    $page = (object) [
+        'title' => 'Detail user'
+    ];
+
+    $activeMenu = 'user';
+
+    return view('user.show', [
+        'breadcrumb' => $breadcrumb, 
+        'page' => $page,
+        'user' => $user,
+        'level' => $level, // Melewatkan data level ke tampilan
+        'activeMenu' => $activeMenu
+    ]);
+}
+
 
         public function edit(string $id) {
             $user = UserModel::find($id);
