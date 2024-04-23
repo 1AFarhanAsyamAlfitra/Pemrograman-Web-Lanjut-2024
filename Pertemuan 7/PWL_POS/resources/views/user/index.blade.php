@@ -10,11 +10,11 @@
     }
 
     .dt-buttons .btn.buttons-excel {
-        background-color: #33c481;
+        background-color: #045e34;
     }
 
     .dt-buttons .btn.buttons-pdf {
-        background-color: #f00;
+        background-color: rgb(209, 0, 0);
     }
 </style>
 
