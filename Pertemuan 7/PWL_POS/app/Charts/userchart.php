@@ -24,7 +24,7 @@ class userchart
         
         $dataRaw = DB::select(
         "SELECT count(user_id) as count, DATE_FORMAT(u.created_at, '%W %d %M') as day 
-        from m_user as u where u.created_at >=".$start."
+        from users as u where u.created_at >=".$start."
         GROUP by day"
         );
 

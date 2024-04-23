@@ -30,7 +30,7 @@
                         <td>{{ $penjualan->penjualan_kode }}</td>
                         <td>{{ $penjualan->penjualan_tanggal }}</td>
                         <td>
-                            <a href="{{ url('penjualan', $penjualan->penjualan_id) }}" class="btn btn-sm btn-default">Details</a>
+                            <a href="{{ url('penjualan', $penjualan->penjualan_id) }}" class="btn btn-info btn-sm ">Details</a>
                             <a href="{{ url('penjualan', $penjualan->penjualan_id. '/edit') }}" class="btn btn-sm btn-primary">Edit</a>
                             <form method="POST" action="{{ url('penjualan', $penjualan->penjualan_id) }}" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this item?')">
                                 @csrf

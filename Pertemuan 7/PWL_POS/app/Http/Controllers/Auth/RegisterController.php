@@ -7,6 +7,8 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
+
 
 class RegisterController extends Controller
 {
@@ -49,8 +51,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'nama' => ['required', 'string', 'max:255'],
+            'profilepicture' => ['nullable', 'mimes:png,jpg,jpeg', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'username' => ['required', 'string', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -63,9 +67,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        $file= $data['profilepicture'];
+        $filename = Str::random(10).$file->getClientOriginalName();
+        $file->storeAs('public/files/',$filename);
+        $data['profilepicture'] = $filename;
+
         return User::create([
-            'name' => $data['name'],
+            'nama' => $data['nama'],
             'email' => $data['email'],
+            'username' => $data['username'],
+            'profilepicture' => $data['profilepicture'],
+            'level_id' => 4,
             'password' => Hash::make($data['password']),
         ]);
     }

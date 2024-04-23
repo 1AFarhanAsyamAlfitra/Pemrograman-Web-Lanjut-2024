@@ -74,6 +74,7 @@ class GambarController extends Controller
         $filename = Str::random(10).$file->getClientOriginalName();
         $file->storeAs('public/files/',$filename);
         $data['file'] = $filename;
+        
         GambarModel::create($data);
         return redirect('/gambar')->with('success', 'Data Gambar berhasil disimpan');
     }
