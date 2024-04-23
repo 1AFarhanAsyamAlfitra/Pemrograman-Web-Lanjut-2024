@@ -8,6 +8,7 @@ use App\Models\UserModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Str;
 
 
 class UserController extends Controller
@@ -73,20 +74,21 @@ class UserController extends Controller
         }
 
         public function store(Request $request) {
-            $request->validate([
+            $data = $request->validate([
                 // username harus diisi, berupa string, minimal 3 karakter, dan bernilai unik di tabel m_user kolom username
                 'username' => 'required|string|min:3|unique:m_user,username',
+                'profilepicture' => 'required|mimes:png,jpg,jpeg', 
                 'nama'     => 'required|string|max:100',
                 'password' => 'required|min:5', 
                 'level_id' => 'required|integer'         
             ]);
+
+            $file= $data['profilepicture'];
+            $filename = Str::random(10).$file->getClientOriginalName();
+            $file->storeAs('public/files/',$filename);
+            $data['profilepicture'] = $filename;
     
-            UserModel::create([
-                'username' => $request->username,
-                'nama'     => $request->nama,
-                'password' => bcrypt($request->password), 
-                'level_id' => $request->level_id
-            ]);
+            UserModel::create($data);
     
             return redirect('/user')->with('success', 'Data user berhasil disimpan');
         }
@@ -136,17 +138,26 @@ class UserController extends Controller
         }
     
         public function update(Request $request, string $id) {
-            $request->validate([
+            $data = $request->validate([
                 'username' => 'required|string|min:3|unique:m_user,username,' . $id . ',user_id',
                 'nama'     => 'required|string|max:100', 
-                'password' => 'nullable|min:5',
-                'level_id' => 'required|integer'
+                'password' => 'nullable|min:8',
+                'level_id' => 'required|integer',
+                'profilepicture' => 'nullable|mimes:jpg,png,jpeg'
+
             ]);
+
+            if($request->only('profilepicture')){
+                $file= $data['profilepicture'];
+                $filename = Str::random(10).$file->getClientOriginalName();
+                $file->storeAs('public/files/',$filename);
+                $data['profilepicture'] = $filename;
+            }
     
             UserModel::find($id)->update([
                 'username' => $request->username,
-                'nama'     => $request->nama,
-                'password' => $request->password ? bcrypt($request->password) : UserModel::find($id)->password,
+                'nama' => $request->nama,
+                'password' => $request->password ? bcrypt($request->password) : userModel::find($id)->password,
                 'level_id' => $request->level_id
             ]);
     

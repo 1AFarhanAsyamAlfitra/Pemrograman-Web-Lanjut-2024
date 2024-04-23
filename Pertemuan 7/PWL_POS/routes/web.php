@@ -28,7 +28,7 @@ use App\Http\Controllers\VisualizationController;
 */
 
 Route::get('/logout', [AuthController::class, 'logout']);
-Route::post('/login', 'Auth\LoginController@login')->name('login');
+// Route::post('/login', 'Auth\LoginController@login')->name('login');
 // Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
