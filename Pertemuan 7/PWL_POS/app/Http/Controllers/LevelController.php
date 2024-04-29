@@ -141,7 +141,7 @@ class LevelController extends Controller
     public function destroy(string $id)
     {
         $check = LevelModel::find($id);
-
+        
         if(!$check){
             return redirect('/level')->with('error', 'Data level tidak ditemukan');
         }

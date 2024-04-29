@@ -124,7 +124,7 @@ class ProductController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'kategori_id' => 'required|integer|unique:m_kategori,kategori_id',
+            'kategori_id' => 'required|integer',
             'barang_kode' => 'required|string|min:3|unique:m_barang,barang_kode,'.$id.',barang_id',
             'barang_nama' => 'required|string|max:100',
             'harga_beli' => 'required|numeric',

@@ -151,14 +151,18 @@ class UserController extends Controller
                 $file= $data['profilepicture'];
                 $filename = Str::random(10).$file->getClientOriginalName();
                 $file->storeAs('public/files/',$filename);
+                // dd($filename);
                 $data['profilepicture'] = $filename;
             }
+
+            // dd($data);
     
             UserModel::find($id)->update([
                 'username' => $request->username,
                 'nama' => $request->nama,
                 'password' => $request->password ? bcrypt($request->password) : userModel::find($id)->password,
-                'level_id' => $request->level_id
+                'level_id' => $request->level_id,
+                'profilepicture' => $request->only('profilepicture')? $data['profilepicture'] : userModel::find($id)->profilepicture
             ]);
     
             return redirect('/user')->with('success', 'Data user berhasil diubah');
