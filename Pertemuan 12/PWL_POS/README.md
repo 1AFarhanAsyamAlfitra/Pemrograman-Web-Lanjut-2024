@@ -1,66 +1,43 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+![A  Form upload](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/8d6ef5a0-0fd8-448d-8a0a-af2135193310)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+![A 2 Percobaan UploD](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/bfa35dc0-fa19-4544-875b-28a3a7f03723)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![A 3 Telah Melakukan Upload](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/6bfd0178-a4cf-49fb-9f9f-d408055370fb)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![B  INFORMASI FILE UPLOAD - Upload dengan isi](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/672830bd-29de-409f-8456-2b9f3f9a7418)
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![B  INFORMASI FILE UPLOAD - Upload kosong](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/a81ea2f4-3b24-4f74-814f-4b7e561d7515)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![B  INFORMASI FILE UPLOAD Langkah 4](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/891d41e6-d581-4ade-bc08-97c7fe6bbd5e)
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+![C  VALIDASI FILE UPLOAD Langkah 1](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/55b956fd-ced0-4e21-9ebd-a9fb90874ee5)
 
-### Premium Partners
+![C  VALIDASI FILE UPLOAD Percobaan Upload lebih 500](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/dad2b173-bbbc-4fdc-98cd-6f548cec34e6)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+![C  VALIDASI FILE UPLOAD Percobaan Upload selain image](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/1e2fbf4e-7f81-4950-83be-c073c5fbd464)
 
-## Contributing
+![D  MEMINDAH FILE UPLOAD Langkah 1 berkas](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/5c0bf726-1f0a-4056-9835-9f0df9a69a8d)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+![D  MEMINDAH FILE UPLOAD Langkah 1 Hasil di VSCode](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/28650e22-45c9-4718-8abd-8b2209ccf713)
 
-## Code of Conduct
+![D  MEMINDAH FILE UPLOAD Langkah 1 web_](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/6b8c1282-d9ba-48c3-bdee-7431408cc66a)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+![D  MEMINDAH FILE UPLOAD Langkah 1](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/f9e2aa27-1d08-4f64-8ead-b386af0a984f)
 
-## Security Vulnerabilities
+![F  METHOD MOVE Terakhir](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/0926a990-5899-4ba4-a8ea-88d95a5f58d7)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+![MEMBUAT SYMLINK Langkah 2](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/c7835a01-d8b0-4d7c-8f2d-f170720f3dc5)
 
-## License
+![MEMBUAT SYMLINK Langkah terakhir](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/b667b072-2f76-4ce9-bd95-0a41e3c3184d)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+TUGAS
+
+![TUGAS 1](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/13931428-f7c9-421a-aa95-6ac663f45c51)
+
+![Tugas 2](https://github.com/Farhanasyam/Pemrograman-Web-Lanjut-2024/assets/91405258/54efd794-e669-4775-99d7-065eed872b69)
+
